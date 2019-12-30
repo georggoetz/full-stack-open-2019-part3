@@ -19,13 +19,13 @@ const personSchema = new mongoose.Schema({
 })
 
 const Person = mongoose.model('Person', personSchema)
- 
+
 /*
 const person = new Person({
   name: 'Georg Goetz',
   number: '1234567890'
 })
-  
+
 person.save().then(response => {
   console.log('person saved!')
   mongoose.connection.close()
@@ -37,10 +37,10 @@ if (newName && newNumber) {
     name: newName,
     number: newNumber
   })
-    
+
   person
     .save()
-    .then(response => {
+    .then(reponse => {
       console.log(`added ${newName} number ${newNumber} to phonebook`)
       mongoose.connection.close()
     })

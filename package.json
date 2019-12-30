@@ -10,7 +10,8 @@
     "build:ui": "rd /s/q .\\build 2> nul & cd ..\\full-stack-open-2019\\part2\\phonebook && npm run build --prod && xcopy /E/I .\\build ..\\..\\..\\full-stack-open-2019-part3\\build",
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,8 @@
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }
